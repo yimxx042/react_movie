@@ -7,7 +7,7 @@ const middlewares = jsonServer.defaults({
 const PORT = process.env.PORT || 8000;
 ServiceUIFrameContext.use(middlewares);
 server.use(jsonServer.rewriter({
-    '/api/*: '/$1',
+    '/movies/*: '/$1',
 }))
 server.use(router);
 server.listen(PORT, () => {
